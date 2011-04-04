@@ -19,5 +19,9 @@ class Valvat
     def self.vat_country_to_iso_country(vat_country)
       vat_country == "EL" ? "GR" : vat_country
     end
+    
+    def self.should_pay_vat(vat1,vat2)
+      self.split(vat1)[0] == self.split(vat2)[0]
+    end    
   end
 end
